@@ -1,0 +1,31 @@
+CONFIGURACIÓN A AGREGAR EN build.gradle.kts
+
+Dentro del bloque android { } agrega:
+
+---
+buildFeatures {
+    viewBinding = true
+}
+---
+
+UBICACIÓN EXACTA en el archivo:
+Busca: android { ... }
+Agrega el bloque buildFeatures DENTRO de este bloque.
+
+Ejemplo:
+android {
+    namespace = "com.ejemplo.listadetareas"
+    compileSdk = 34
+    
+    defaultConfig {
+        // ...
+    }
+    
+    buildTypes {
+        // ...
+    }
+    
+    buildFeatures {
+        viewBinding = true
+    }
+}
